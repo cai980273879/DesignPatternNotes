@@ -1,4 +1,4 @@
-###Annotation(注解)
+### Annotation(注解)
 ![](http://upload-images.jianshu.io/upload_images/3458176-c5642804973c8b6e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 * 概述
   * Annotation即注解，也被翻译为注释，是JDK 5 Java对元数据（MetaData）的支持。
@@ -7,7 +7,7 @@
   *Annotation提供了一种为程序元素设置数据的方法，从某些方面来看，Annotation就像修饰符一样，可用于修饰包、类、构造器、方法、成员变量、参数、局部变量的声明，这些信息被存储在Annotation的“name=value”对中。
   *Annotation能被用来为程序元素（类、方法、成员变量等）设置元数据。
   *Annotation不影响程序代码的执行，无论增加、删除Annotation，代码都始终如一地执行。
-###5个基本Annotation
+### 5个基本Annotation
 * @Override
 * @Deprecated
 * @SuppressWarnings
@@ -15,8 +15,8 @@
 * @FunctionalInterface
 
 (@FunctionalInterface是Java 8新增的。这5个基本的Annotation都定义在java.lang包下)
-####Introduce to each Annotation
-#####1.@Override
+#### Introduce to each Annotation
+##### 1.@Override
 @Override就是用来指定一个方法是重写父类中的方法的。例如：
 ```
 @Override
@@ -27,7 +27,7 @@ public String toString() {
 上面是重写Object的toString()方法,我们用@Override来**标记**这个方法是重写父类Object中的toString()方法。如果不类不存在toString()方法，在编译时就会报错。
 @Override主要是帮助程序员避免一些低级错误。例如父类中有个一个execute()的方法，但是我们在重写此方法的时候把方法名字写错了。这样我们在调用这个写错了的方法时不会影响程序的运行，但是得到的结果可能与我们的预期不同。这样的错误排查起来也非常费时费力，有了@Override可一定程度的解决这一问题的发生。
 
-#####2.标识已过时：@Deprecated
+##### 2.标识已过时：@Deprecated
 @Deprecated用于表示某个程序元素（类、方法等）已过时，当其他程序使用已过时的类、方法时，编译器将会给出警告。例如：
 ```
 public class Test {
@@ -44,7 +44,7 @@ class Apple {
         System.out.println("Apple的info方法");
     }
 ```
-#####3.抑制编译器警告：@SuppressWarnings
+##### 3.抑制编译器警告：@SuppressWarnings
 @SuppressWarnings指示被该Annotation修饰的程序元素（以及该程序元素中的所有子元素）取消显示指定的编译警告。
 @SuppressWarnings会一直作用于该程序元素的所有自元素，例如，使用@SuppressWarnings修饰某个类取消显示某个编译器警告，同时又修饰该类里的某个方法取消显示另一个编译器警告，那么该方法将会同时取消显示这两个编译器警告。
 ```
@@ -85,7 +85,7 @@ JDK除了在java.lang下提供了5个基本的Annotation之外，还在java.lang
 
 
 
-####1.@Retention
+#### 1.@Retention
 @Retention只能用于修饰Annotation定义，用于指定被修饰的Annotation可以保留多长时间
 
 @Retention包含一个RetentionPolicy类型的value成员变量，所以使用@Retention时必须为该value成员变量指定值。value成员变量的值只能是如下三个：
@@ -111,7 +111,7 @@ public @interface Testable{}
 ```
 如第二种方式所示，当Annotation的变量名为value时，程序中可以直接在Annotation后的括号里指定该成员变量的值，无须使用name＝value的形式。
 ___
-#####2.@Target
+##### 2.@Target
 Target也只能修饰一个Annotation定义，它用于指定被修饰的Annotation能用于修饰那些程序单元。
 
 @Target元Annotation也包含一个名为value的成员变量，该成员变量的值只能是如下几个。
@@ -140,14 +140,14 @@ public @interface ActionListenerFor{}
 ```
 
 ___
-#####3.@Documented
+##### 3.@Documented
 @Documented用于指定被该元Annotation修饰的Annotation类将被Javadoc工具提取成文档，如果定义Annotation类时使用了@Documented修饰，则所有使用该Annotation修饰的程序元素的API文档中将会包含该Annotation说明。明出处。
 
-#####4.@Inherited
+##### 4.@Inherited
 @Inherited元Annotation指定被它修饰的Annotation将具有继承性——如果某个类使用了@Xxx注解（定义该Annotation时使用了@Inherited修饰）修饰，则其子类将自动被@Xxx修饰。
 
 ____
-###自定义Annotation
+### 自定义Annotation
 通过一个完整的例子来演示一下自定义Annotation。代码如下：
 ```
 @Testable(name="hello",age=20)
@@ -178,12 +178,12 @@ public class Test {
 * 成员变量的声明方式使用类似声明方法一样。
 * 成员变量可以有默认值，如果有默认值则使用default关键字后面加默认值，当使用次Annotation时如果为成员变量指定值则默认值无效，否则使用默认值。
 ____
-###分类：
+### 分类：
 根据Annotation是否可以包含成员变量，可以把Annotation分为如下两类。
 * 1.标记Annotation：没有定义成员变量的Annotation类型被称为标记。这种Annotation仅利用自身的存在与否来提供信息，如前面介绍的@Override、@Test等Annotation。
 * 2.元数据Annotation：包含成员变量的Annotation，因为他们可以接受更多的元数据，所以也被称为元数据Annotation。
 ____
-###提取Annotation信息:
+### 提取Annotation信息:
 使用Annotation修饰了类、方法、成员变量等成员之后，这些Annotation不会自己生效，必须由开发者提供相应的工具来提取并处理Annotation信息。
 
 Annotation接口是所有注解的父接口。
@@ -212,7 +212,7 @@ java8新增了重复注解功能，所以下面两个方法在java8之后才有�
 <T extends Annotation> T[] getDeclaredAnnotationsByType(Class<T> annotationClass)：返回直接修饰该程序元素的指定类型的多个注解，不存在则返回 null。
 ```
 ___
-###案例
+### 案例
 需求：获取Test类的info方法上的所有注解，并打印出来，如果包含MyTag注解，则再输出MyTag注解的元数据。
 
 实现：正如我们所知，仅在程序中使用注解是不起任何作用的，必须使用注解处理工具来处理程序中的注解。下面就写一个注解处理类。处理注解的思路如下：通过反射获取Test的类描述类Class，然后在获取其info方法描述类Method，因为Method实现了AnnotatedElement接口，所以调用getAnnotations方法获取所有注解，在遍历打印。
