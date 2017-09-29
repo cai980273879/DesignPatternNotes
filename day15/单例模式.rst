@@ -27,28 +27,16 @@
 
 - Singleton：单例
 
-.. image:: /_static/Singleton.jpg
+.. image:: https://design-patterns.readthedocs.io/zh_CN/latest/_images/Singleton.jpg
 
 
 时序图
 --------------------
-.. image:: /_static/seq_Singleton.jpg
+.. image:: https://design-patterns.readthedocs.io/zh_CN/latest/_images/seq_Singleton.jpg
 
 代码分析
 --------------------
-.. literalinclude:: /code/Singleton/main.cpp
-   :language: cpp
-   :linenos:
-   :emphasize-lines: 7-8
 
-.. literalinclude:: /code/Singleton/Singleton.cpp
-   :language: cpp
-   :linenos:
-   :emphasize-lines: 21-28
-
-运行结果：
-
-.. image:: /_static/Singleton_run.jpg
 
 模式分析
 --------------------

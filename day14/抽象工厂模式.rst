@@ -33,36 +33,16 @@
 - AbstractProduct：抽象产品
 - Product：具体产品
 
-.. image:: /_static/AbatractFactory.jpg
+.. image:: https://design-patterns.readthedocs.io/zh_CN/latest/_images/AbatractFactory.jpg
 
 
 时序图
 --------------------
-.. image:: /_static/seq_AbatractFactory.jpg
+.. image:: https://design-patterns.readthedocs.io/zh_CN/latest/_images/seq_AbatractFactory.jpg
 
 代码分析
 --------------------
-.. literalinclude:: /code/AbstractFactory/main.cpp
-   :language: cpp
-   :linenos:
-   :lines: 1-21
-   :emphasize-lines: 11-21
-
-.. literalinclude:: /code/AbstractFactory/ConcreteFactory1.cpp
-   :language: cpp
-   :linenos:
-   :lines: 1-10,21-28
-   :emphasize-lines: 11-18
-
-.. literalinclude:: /code/AbstractFactory/ProductA1.cpp
-   :language: cpp
-   :linenos:
-   :lines: 1-10,21-23
-   :emphasize-lines: 11-13
-
-运行结果：
-
-.. image:: /_static/AbatractFactory_run.jpg
+见src目录
 
 
 模式分析
