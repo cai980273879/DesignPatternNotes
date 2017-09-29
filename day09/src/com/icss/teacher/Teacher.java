@@ -1,6 +1,6 @@
 package com.icss.teacher;
 
-public class teacher {
+public class Teacher {
     private String num;
     private String name;
     private String birthdate;
