@@ -78,7 +78,7 @@ Java把引发这种错误的原因称为“堆污染”（Heap pollution）,当�
 #####5.Java 8的函数式接口与@FunctionalInterface
 @FunctionalInterface它是用来指定某个接口必须是函数式接口（一个接口中只能有一个抽象方法）
 ___
-###元Annotation
+### 元Annotation
 JDK除了在java.lang下提供了5个基本的Annotation之外，还在java.lang.annotation包下提供了6个Meta Annotation（元Annotation），其中有5个元Annotation都用于修饰其他的Annotation定义。
 (@Repeatable专门用于定义Java 8新增的重复注解。)
 
