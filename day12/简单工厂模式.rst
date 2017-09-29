@@ -31,17 +31,11 @@
 时序图
 --------------------
 
-.. image:: /_static/seq_SimpleFactory.jpg
+.. image:: https://design-patterns.readthedocs.io/zh_CN/latest/_images/seq_SimpleFactory.jpg
 
 代码分析
 --------------------
-
-.. literalinclude:: /code/SimpleFactory/Factory.cpp
-   :language: cpp
-   :lines: 1-10,24-
-   :emphasize-lines: 12-19
-   :linenos:
-
+- 见src目录
 
 模式分析
 --------------------
@@ -53,7 +47,7 @@
 
 实例
 --------------------
-(略）
+
 
 
 简单工厂模式的优点
