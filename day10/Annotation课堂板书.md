@@ -68,3 +68,6 @@ CLASS:在class文件中有效（即class保留）
     isAnnotationPresent(Class)
 
 	getAnnotation(Class)
+	
+7.作业
+    为上次作业编写一个Anotation，用于指定实体类属性和类名的中文名，并加入对应的提示。
