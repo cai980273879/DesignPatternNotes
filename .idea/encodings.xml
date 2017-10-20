@@ -5,5 +5,9 @@
     <file url="file://$PROJECT_DIR$/day15/src/com/taroballs/test2/CloneTest2.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/day15/src/com/taroballs/test3/CloneTest2.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/day15/src/com/taroballs/test4/CloneTest3.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/day18/src/com/icss/adapter/ClassAdapter.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/day18/src/com/icss/adapter/ObjectAdapter.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/day18/src/com/icss/adapter/TypeC.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/day19/桥接模式板书.md" charset="GBK" />
   </component>
 </project>
